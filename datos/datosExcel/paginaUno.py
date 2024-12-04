@@ -19,7 +19,7 @@ def leer_csv(archivo_csv):
         df.columns = ['Año', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024']
         
         # Establecer la columna "Sistema Operativo" como índice
-        df.set_index('Empresas', inplace=True)
+        df.set_index('Año', inplace=True)
         
         return df
     except Exception as e:
@@ -37,8 +37,8 @@ def graficar_datos(df):
             plt.plot(df.columns, df.loc[sistema], label=sistema, marker='o')
         
         # Agregar título y etiquetas
-        plt.title('Qué tipos de software desarrollas con tus lenguajes principales', fontsize=16)
-        plt.xlabel('Lenguaje', fontsize=12)
+        plt.title('Utilización de PlayStation, Xbox y Nintendo desde 2013 al 2024', fontsize=16)
+        plt.xlabel('Año', fontsize=12)
         plt.ylabel('Porcentaje (%)', fontsize=12)
         plt.xticks(df.columns, rotation=45)
         plt.yticks(range(0, 101, 10))
