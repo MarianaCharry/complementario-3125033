@@ -12,14 +12,14 @@ def leer_csv(archivo_csv):
         print(df.head())
         
         # Verificar que el número de filas es correcto
-        if df.shape[0] != 3:
+        if df.shape[0] != 16:
             raise ValueError(f"Se esperaban 4 filas, pero se encontraron {df.shape[0]} filas.")
         
         # Asignar los nombres a las columnas, los años (del 2018 al 2023)
-        df.columns = ['Año', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024']
+        df.columns = ['Languages', 'Java', 'Python', 'JavaScript', 'SQL', 'TypeScript', 'C++', 'PHP', 'Go', 'Kotlin']
         
         # Establecer la columna "Sistema Operativo" como índice
-        df.set_index('Empresas', inplace=True)
+        df.set_index('Languages', inplace=True)
         
         return df
     except Exception as e:
@@ -55,6 +55,6 @@ def graficar_datos(df):
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    archivo_csv = "C:/Users/MOMY/Documents/complementario-3125033/datos/datosExcel/paginaUno.csv"  # Ruta del archivo CSV
+    archivo_csv = "C:/Users/MOMY/Documents/complementario-3125033/datos/datosExcel/paginaTres.csv"  # Ruta del archivo CSV
     df = leer_csv(archivo_csv)
     graficar_datos(df)
