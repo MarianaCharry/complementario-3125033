@@ -12,14 +12,14 @@ def leer_csv(archivo_csv):
         print(df.head())
         
         # Verificar que el número de filas es correcto
-        if df.shape[0] != 4:
-            raise ValueError(f"Se esperaban 4 filas, pero se encontraron {df.shape[0]} filas.")
+        if df.shape[0] != 9:
+            raise ValueError(f"Se esperaban 9 filas, pero se encontraron {df.shape[0]} filas.")
         
         # Asignar los nombres a las columnas, los años (del 2018 al 2023)
-        df.columns = ['Sistema Operativo', '2018', '2019', '2020', '2021', '2022', '2023']
+        df.columns = ['Gastos', '2005', '2006', '2007', '2008', '2009','2010','2011','2012','2013','2014','2015']
         
         # Establecer la columna "Sistema Operativo" como índice
-        df.set_index('Sistema Operativo', inplace=True)
+        df.set_index('Gastos', inplace=True)
         
         return df
     except Exception as e:
@@ -37,14 +37,14 @@ def graficar_datos(df):
             plt.plot(df.columns, df.loc[sistema], label=sistema, marker='o')
         
         # Agregar título y etiquetas
-        plt.title('Distribución de sistemas operativos de PC para el desarrollo de software a nivel mundial entre 2018 y 2023', fontsize=16)
+        plt.title('Gasto mundial en software entre 2005 y 2015', fontsize=16)
         plt.xlabel('Año', fontsize=12)
-        plt.ylabel('Porcentaje (%)', fontsize=12)
+        plt.ylabel('Gasto (miles de millones de dólares estadounidenses)', fontsize=12)
         plt.xticks(df.columns, rotation=45)
         plt.yticks(range(0, 101, 10))
         
         # Agregar leyenda
-        plt.legend(title='Sistemas Operativos')
+        plt.legend(title='Gastos')
         
         # Mostrar gráfico
         plt.grid(True)
@@ -55,6 +55,6 @@ def graficar_datos(df):
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    archivo_csv = "C:/Users/MOMY/Documents/complementario-3125033/datos/datosExcel/paginaSeis.csv"  # Ruta del archivo CSV
+    archivo_csv = "C:/Users/MOMY/Documents/complementario-3125033/datos/datosExcel/paginaNuevee.csv"  # Ruta del archivo CSV
     df = leer_csv(archivo_csv)
     graficar_datos(df)
