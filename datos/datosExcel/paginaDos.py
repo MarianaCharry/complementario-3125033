@@ -15,10 +15,10 @@ def leer_csv(archivo_csv):
         if df.shape[0] != 25:
             raise ValueError(f"Se esperaban 25 filas, pero se encontraron {df.shape[0]} filas.")
         
-        # Asignar los nombres a las columnas, los años (del 2018 al 2023)
-        df.columns = ['Campos', 'Market Capitalization USD B', 'Cambio M o B', 'Fecha (2024-09)']
+        # Asignar los nombres a las columnas
+        df.columns = ['Campos', 'Market Capitalization', 'Cambio', 'Fecha']
         
-        # Establecer la columna "Sistema Operativo" como índice
+        # Establecer la columna "Campos" como índice
         df.set_index('Campos', inplace=True)
         
         return df
@@ -32,19 +32,22 @@ def graficar_datos(df):
         # Configuración del gráfico
         plt.figure(figsize=(10, 6))
         
-        # Graficar cada sistema operativo
-        for sistema in df.index:
-            plt.plot(df.columns, df.loc[sistema], label=sistema, marker='o')
+        # Graficar Market Capitalization y Cambio de cada empresa
+        # Grafico de Market Capitalization
+        plt.plot(df.index, df['Market Capitalization'], label='Market Capitalization', marker='o', linestyle='-', color='b')
+        
+        # Grafico de Cambio
+        plt.plot(df.index, df['Cambio'], label='Cambio', marker='x', linestyle='--', color='r')
         
         # Agregar título y etiquetas
-        plt.title('Capitalización De Mercado', fontsize=16)
-        plt.xlabel('Año', fontsize=12)
+        plt.title('Market Capitalization y Cambio de Empresas', fontsize=16)
+        plt.xlabel('Empresas', fontsize=12)
         plt.ylabel('Valores', fontsize=12)
-        plt.xticks(df.columns, rotation=45)
-        plt.yticks(range(0, 101, 10))
+        plt.xticks(rotation=90)  # Rotar las etiquetas del eje X para que sean legibles
+        plt.yticks(range(0, 351, 50))  # Ajustar el rango de los valores en el eje Y
         
         # Agregar leyenda
-        plt.legend(title='Lenguajes')
+        plt.legend(title='Indicadores')
         
         # Mostrar gráfico
         plt.grid(True)
