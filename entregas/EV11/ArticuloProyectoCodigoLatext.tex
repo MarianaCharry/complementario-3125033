@@ -1,0 +1,143 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Configuración de márgenes
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+% Configuración de colores para enlaces sin subrayado
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    filecolor=magenta,
+    citecolor=black,
+    pdfborder={0 0 0}
+}
+
+% Configuración de columnas
+\setlength{\columnsep}{1cm}
+
+% Título del documento
+\title{\textbf{Software para el Registro y Asignación de Espacios en Centros Educativos}}
+\author{
+    \textbf{Aura María Fierro Fierro} \\ \href{mailto:aura.fierro@sena.edu.co}{aura.fierro@sena.edu.co} \and
+    \textbf{Mariana Charry Prada} \\ \href{mailto:mariana.charry@soy.sena.edu.co}{mariana.charry@soy.sena.edu.co} \and
+    \textbf{Kevin Camilo Muñoz Campos} \\ \href{mailto:kevin.muoz11@soy.sena.edu.co}{kevin.muoz11@soy.sena.edu.co} \and
+    \textbf{John Sebastián Penna Arias} \\ \href{mailto:john.penna@soy.sena.edu.co}{john.penna@soy.sena.edu.co} \and
+    \textbf{Juan Pablo Betancourt Gómez} \\ \href{mailto:juan.betancourt11@soy.sena.edu.co}{juan.betancourt11@soy.sena.edu.co}
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+% Contenido en dos columnas
+\begin{multicols}{2}
+
+\section*{Abstract}
+This article presents the results of the "AsignaWeb" project, a platform designed for educational centers that facilitates the reservation of spaces such as laboratories, auditoriums, libraries, computer centers, among others. This project arises from the need to solve the problems that these centers face when managing reservations manually, a process that can be tedious for users and exhausting for administrators. Traditional methods, such as the use of physical sheets, are subject to inconveniences such as loss of documents, cross-outs, and errors that affect efficiency. To solve these difficulties, "AsignaWeb" proposes a website and a mobile application that simplify the reservation process, providing an orderly and efficient system that improves the management of spaces, offering intuitive options for both administrators and users.
+
+\textbf{Keywords}:Reservation management, educational centers, web platform, reservation efficiency, centralized control, and error reduction.
+
+\section*{Resumen}
+El presente artículo expone los resultados del proyecto "AsignaWeb", una plataforma diseñada para centros educativos que facilita la reserva de espacios como laboratorios, auditorios, bibliotecas, centros de informática, entre otros. Este proyecto surge de la necesidad de solucionar la problemática que enfrentan estos centros al gestionar las reservas de forma manual, un proceso que puede resultar tedioso para los usuarios y agotador para los administradores. Los métodos tradicionales, como el uso de hojas físicas, están sujetos a inconvenientes como pérdidas de documentos, tachaduras y errores que afectan la eficiencia. Para resolver estas dificultades, "AsignaWeb" propone un sitio web y una aplicación móvil que simplifican el proceso de reserva, proporcionando un sistema ordenado y eficiente que mejora la gestión de espacios, ofreciendo opciones intuitivas tanto para administradores como para usuarios.
+
+\textbf{Palabras claves}: Gestión de reservas, centros educativos, plataforma web, eficiencia en reservas, control centralizado y reducción de errores.
+
+\section*{Introducción}
+En los centros educativos, la gestión eficiente de espacios, es una tarea crítica para garantizar el correcto desarrollo de actividades académicas y extracurriculares. Sin embargo, esta gestión a menudo se ve obstaculizada por el uso de métodos manuales, como hojas físicas y registros en papel, que son propensos a errores, conflictos de horarios y pérdidas de información. Estas limitaciones no solo afectan la experiencia de los usuarios, como aprendices e instructores, sino que también aumentan significativamente la carga administrativa de los encargados de coordinar los espacios.
+
+
+\section*{Planteamiento del Problema}
+La falta de organización en algunas instituciones al momento de asignar los espacios en general en el centro educativo. De igual manera enfrenta desafíos significativos, como la falta de un sistema automatizado, la falta de información actualizada, la inequidad en la asignación, la falta de mantenimiento de los espacios y la falta de coordinación entre los actores involucrados. Estos problemas impactan en la eficiencia y equidad del proceso, así como en la calidad del entorno educativo ofrecido a los estudiantes o aprendices. 
+
+El registro y asignación de espacios en centros educativos es un proceso vital que tiene como objetivo fundamental asegurar un entorno propicio para el aprendizaje de los estudiantes o aprendices. a través de este proceso, se busca garantizar que cada grupo, actividad o clase cuente con el espacio adecuado y los recursos necesarios para llevar a cabo sus actividades de manera eficiente y efectiva.
+
+Con la transformación digital, ha surgido la necesidad de implementar soluciones tecnológicas que permitan optimizar procesos cotidianos y garantizar la eficiencia organizacional. En este contexto, el proyecto "AsignaWeb" se presenta como una solución innovadora que aborda los problemas asociados con la gestión manual de reservas. La plataforma combina un sitio web y una aplicación móvil que proporcionan herramientas avanzadas para simplificar el proceso de reservas, eliminando los errores y reduciendo la carga administrativa.
+
+
+\section*{Propósito}
+El propósito de este proyecto es poder tener un mejor orden en cualquier centro educativo para ofrecer un sistema automatizado, centralizado  y ordenado que agilice y simplifique la asignación de ambientes.
+
+\section*{Justificación}
+Las instituciones educativas, tienen problemas, conflictos, discusiones con el tema de reservar las aulas de enseñanza por una mala comunicación o por temas del manejo manual de una reserva de algún espacio. Ya al  tener un registro por el sitio web de una manera más  eficiente y organizada, se puede evitar la sobreutilización de los espacios educativos.
+Este artículo describe cómo "AsignaWeb" ha logrado impactar de manera positiva en los centros educativos mediante la introducción de funcionalidades avanzadas, tales como notificaciones en tiempo real, una interfaz accesible desde cualquier dispositivo y la centralización de los datos. Estas características han permitido mejorar la eficiencia y ofrecer una experiencia más satisfactoria tanto para los administradores como para los usuarios.
+
+
+
+\section*{Objetivo General}
+Por lo cual, el objetivo general de AsignaWeb es poder desarrollar un aplicativo web en el cual se podrá ofrecer una mejor calidad a las instituciones al momento de reservar los espacios educativos, para así ya no enfrentar más confusiones, problemas o discusiones. Ejercer un sitio web, cuya función sea tener un orden en la reserva de nuestros usuarios.
+
+\section*{Objetivos Específicos}
+\begin{itemize}
+    \item Establecer un mejor orden en los espacios educativos.
+    \item Facilitar el trabajo al momento de reservar los espacios educativos.
+    \item Evitar conflictos entre los maestros con respecto a la organización de los espacios educativos.
+\end{itemize}
+
+\section*{Alcance}
+Está dirigido específicamente a los centros de educación, teniendo en cuenta todos los ambientes disponibles con los que cuente cada institución, abarcando  una comunicación clara y fluida entre los directivos, docentes y personal administrativo.
+Esto implica establecer un chat  comunicativo efectivos y fomentar la colaboración para asegurar una asignación adecuada de los espacios educativos según las necesidades pedagógicas y logísticas de cada grupo o actividad.
+
+
+\section*{Restricciones}
+\begin{itemize}
+    \item Software dependiente de conexión a internet.
+    \item Cumplimiento de la Ley de Protección de Datos Personales.
+    \item Compatibilidad con dispositivos y navegadores web.
+    \item Interfaz fácil de usar e intuitiva para los usuarios.
+\end{itemize}
+
+\section*{Resultados}
+El proyecto AsignaWeb generó resultados significativos que reflejan su impacto positivo en la gestión de espacios educativos. Una de las principales contribuciones de la plataforma es la optimización de los procesos de reserva, logrando reducir conflictos de horarios y eliminando los errores comunes de los métodos manuales. Esto ha permitido que los estudiantes y profesores realicen reservas de manera rápida y confiable, sin complicaciones.
+
+La accesibilidad multiplataforma ha sido un factor clave en el éxito de la herramienta. Gracias a su diseño intuitivo, los usuarios pueden gestionar reservas desde cualquier dispositivo, ya sea un computador o un teléfono móvil, lo que ha mejorado significativamente su experiencia. Además, los administradores han señalado que la plataforma ha reducido de manera notable su carga de trabajo, permitiéndoles enfocarse en tareas más estratégicas.
+Otro aspecto destacado son las notificaciones automáticas, que han mejorado la comunicación entre los administradores y los usuarios. Estas notificaciones alertan sobre confirmaciones, cancelaciones o modificaciones en las reservas, lo que contribuye a una mayor transparencia y organización. Este nivel de comunicación ha sido bien recibido por la comunidad educativa, que valora la eficiencia y confiabilidad de "AsignaWeb".
+
+Finalmente, la plataforma ha demostrado ser una solución innovadora y adaptable. Su implementación ha permitido superar las limitaciones de los métodos tradicionales, estableciendo un nuevo estándar en la gestión de reservas. Esto no solo ha beneficiado a los centros educativos que la utilizan, sino que también ha abierto la posibilidad de expandir su uso a otros sectores, como oficinas, instituciones culturales o espacios de coworking.
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{grafica1.png}
+    \caption{Optimización del proceso de reserva.}
+    \label{fig:optimización}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{grafica2.png}
+    \caption{Resultados de accesibilidad y notificaciones.}
+    \label{fig:accesibilidad}
+\end{figure}
+
+\section*{Conclusión}
+El desarrollo e implementación de "AsignaWeb" marca un antes y un después en la transformación digital de los procesos administrativos en los centros educativos. La plataforma ha logrado optimizar la organización de espacios, mejorar la experiencia del usuario y reducir significativamente la carga administrativa. Su diseño intuitivo y su accesibilidad desde múltiples dispositivos han sido fundamentales para lograr estos avances, permitiendo a estudiantes, profesores y administradores gestionar actividades de manera eficiente y sin interrupciones.
+
+Además de resolver problemas específicos de la gestión de reservas, "AsignaWeb" también ha fomentado un cambio cultural en las instituciones educativas, promoviendo la adopción de tecnologías modernas como un pilar fundamental para la mejora continua. La inclusión de notificaciones en tiempo real y la centralización de datos han fortalecido la comunicación y transparencia, garantizando una organización más eficiente.
+
+El impacto de "AsignaWeb" no se limita a los centros educativos. Su diseño modular y escalable permite su adaptación a otros sectores que enfrentan desafíos similares, como instituciones culturales, oficinas corporativas y espacios de coworking. Esto posiciona a la plataforma no solo como una herramienta operativa, sino también como un modelo replicable para transformar procesos en diferentes contextos.
+
+En el futuro, la integración de tecnologías avanzadas, como inteligencia artificial y análisis predictivo, podría ampliar aún más las capacidades de "AsignaWeb", permitiendo una gestión automatizada y personalizada de los espacios. Este enfoque no solo reforzará su funcionalidad, sino que también asegurará su relevancia en un entorno dinámico y competitivo.
+
+En conclusión, "AsignaWeb" ha demostrado ser una herramienta esencial para la modernización de los procesos administrativos en centros educativos. Su impacto positivo destaca la importancia de invertir en soluciones tecnológicas que transformen los métodos tradicionales y garanticen una experiencia más eficiente y satisfactoria para todos los usuarios.
+
+
+\section*{Referencias}
+\begin{itemize}
+    \item Lucidchart. (2020). Cómo crear documentos de diseño de software. Recuperado de \url{https://www.lucidchart.com/blog/es/como-crear-documentos-de-diseno-de-software}.
+    \item Timify. (2024). Software de Reservas Online para el Sector Educativo. Recuperado de \url{https://www.timify.com/es/solutions/reservas-online-para-sector-educativo/}.
+    \item Reservio Blog. (2023). Ventajas del sistema de reservas en línea para tus clientes. Recuperado de \url{https://www.reservio.com/es/blog/consejos/ventajas-del-sistema-de-reservas-en-linea-para-tus-clientes}.
+    \item Numerade. (2023). Ventajas y desventajas de sistemas de reservas. Recuperado de \url{https://www.numerade.com}.
+\end{itemize}
+
+\end{multicols}
+
+\end{document}
